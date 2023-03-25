@@ -21,6 +21,7 @@ body {
  	padding: 20px 15px;
   flex-direction: row;
   justify-content: space-between;
+  
  }
  .site-header__inner2 {
  	position: relative;
@@ -28,7 +29,10 @@ body {
  	padding-right: 15px;
  	display: flex;
  	align-items: center;
+ 
  }
+
+
  .site-header__item {
  	color: #313030;
  }
@@ -51,12 +55,13 @@ body {
   display: flex; /* используем flex для центрирования содержимого */
   align-items: center;  /* центрируем содержимое кнопки */
   position: fixed;
-  top: 35px;
+  
+  top: 55px;
   left: 20px;
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 2;
 }
 /* добавляем "гамбургер" */
 .menu__btn > span,
@@ -91,6 +96,7 @@ body {
   text-align: center;
   background-color: #FFEDDF;
   box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  z-index: 1;
 }
 /* элементы меню */
 .menu__item {
@@ -120,6 +126,18 @@ body {
   visibility: visible;
   left: 0;
 }
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+
  
 .top-level-nav__item {
   position: absolute;
@@ -563,8 +581,7 @@ margin-left: 30px;
   display: flex;
   position: relative;
   flex-direction: row;
-margin: 50px;
-margin-right: 100px;
+margin: 10px;
 }
 
 
@@ -620,12 +637,51 @@ text-align: center;
 align-items: center;
 background-color: #f1770b;
 border-radius: 30px;
+margin: 10px;
 
 }
 .button_3 a {
   text-decoration: none;
   color: white;
 }
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+  
+    .row1 h1 {
+      font-size: 40px;
+     
+    }
+    .row1 p {
+      font-size: 30px;
+    }
+  
+    body {
+    
+  zoom: 0.4;
+  }
+  
+  
+  /* .info-me p {
+    font-size: 20px;
+  
+  }
+  
+  .about-me h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .about-me {
+    padding-bottom: 20px;
+  }
+  .lenta {margin-bottom: 30px;}
+  .category {
+    margin: 10px;
+  
+  } */
+}
+
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
 
@@ -644,7 +700,7 @@ zoom: 0.4;
 }
 
 
-.info-me p {
+/* .info-me p {
   font-size: 20px;
 
 }
@@ -656,11 +712,11 @@ zoom: 0.4;
 }
 .about-me {
   padding-bottom: 20px;
-}
-.lenta {margin-bottom: 30px;}
+} */
+/* .lenta {margin-bottom: 30px;}
 .category {
   margin: 10px;
-}
+} */
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
